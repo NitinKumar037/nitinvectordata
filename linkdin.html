@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        .nav{
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+        }
+        .nav .n1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav .n1 .n11{
+            width: 40px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav .n1 .n11 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .nav .n1 .n12{
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            padding-left: 30px;
+            position: relative;
+            background-color: gainsboro;
+            border: none;
+        }
+        .nav .n1 i{
+            position: absolute;
+            left: 155px;
+            top: 23px;
+            opacity: 0.5;
+        }
+        .nav .n2{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-weight: 800px;
+        }
+        .nav .n3{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .nav .n3 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            border: 2px solid red;
+        }
+        .nav .n3 .dot{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgb(19, 234, 19);
+            top: 8px;
+            right: 88px;
+            border: 1px solid white;
+        }
+        .col{
+            width: 100%;
+            height: 210vh;
+            background-color: rgb(209, 209, 209);
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr 0.8fr;
+            gap: 20px;
+            padding: 15px 70px;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .col .col2{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+        }
+        .col .col2 .c21{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col .col2 .c21 .ta{
+            width: 80%;
+            height: 70%;
+        }
+        .col .col2 .c21 .ta textarea{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 7px 3px;
+            border: none;
+        }
+        .col .col2 .c21 .im{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .col .col2 .c21 .im img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .col .col2 .c22{
+            height: 40%;
+            border: none;
+            border-top: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .col .col2 .c22 div{
+            border: none;
+            border-right: 1px solid gray;
+        }
+        .col .col2 .c22 div button{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none;
+            background-color: white;
+        }
+        .col .col2 .c22 .Post{
+            border: none;
+        }
+        .col .col2 .c22 div button:hover{
+            background-color: blue;
+            color: white;
+        }
+        .arr .arr1{
+            margin: 10px;
+            
+        }
+        .arr .arr1 p{
+            width: 80%;
+            height: 1px;
+            background-color: black;
+            display: inline-block;
+        }
+        .arr .arr1 select{
+            border: none;
+            background:transparent;
+            font-weight: 700;
+        }
+        .x{
+            color: blue;
+        }
+        .col .col1{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap:10px;
+        }
+        .col .col1 .col11{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+        }
+        .col .col1 .col11 .c1{
+            width: 100%;
+            height: 27%;
+        }
+        .col .col1 .col11 .c1 .img1{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            box-shadow: 2px 2px 5px 2px rgb(85, 148, 193);
+
+        }
+        .col .col1 .col11 .c1 .img2{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            left: 100px;
+            top: 165px;
+            border: 2px solid rgb(41, 225, 8);
+        }
+
+        .col .col1 .col11 .c2{
+            box-sizing: border-box;
+            padding-left:27px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .col .col1 .col11 .c2 p{
+            color: orangered;
+        }
+        .col .col1 .col11 .c2 h3{
+            text-shadow: 2px 2px 2px rgb(215, 23, 161);
+            font-weight: 900;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .col .col1 .col11 .c3,.col .col1 .col12 .c3{
+            display: flex;
+            justify-content: space-around;
+            gap: 80px;
+        } 
+        .col .col1 .col11 .c3 .c32,.col .col1 .col12 .c3 .c32{
+            color: blue;
+        }
+        .col .col1 .col11 .c4,.col .col1 .col12 .c4{
+            height: 20%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border: none;
+            border-top: 1px solid gray;
+        }
+        .col .col1 .col11 .c4 .c41,.col .col1 .col12 .c4 .c41{
+            border: none;
+            width: 37%;
+            height: 90%;
+            border-right: 1px solid gray;
+            box-sizing: border-box;
+            padding-top: 27px;
+        }
+        .y{
+            color: orange;
+        }
+        .col .col1 .col12,.col .col1 .col13{
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 10px;
+
+        }
+        .col .col1 .col12 .c1,.col .col1 .col12 .c2,.col .col1 .col13 .c2,.col .col1 .col13 .c1,.col .col1 .col13 .c3{
+            box-sizing: border-box;
+            padding: 5px 20px;
+        }
+        .col .col1 .col12 .c1 h3,.col .col1 .col12 .c2 h3,.col .col1 .col13 .c2 h3,.col .col1 .col13 .c1 h3,.col .col1 .col13 .c3 h3{
+            height: 30px;
+            text-shadow: 2px 2px 2px rgb(38, 30, 36);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        .z{
+            font-size: 12px;
+        }
+        .col .col1 .col13 .c4{
+            width: 100%;
+            height: 10%;
+            border: none;
+            border-top: 1px solid gray;
+            text-align: center;
+            color: blue;
+        }
+        .col .col3{
+            display: grid;
+            grid-template-rows: 1.6fr 1fr 0.5fr;
+            gap: 10px;
+            height:45%;
+        }
+        .col .col3 .col31{
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+        }
+        .col .col3 .col31 .c1{
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+            text-shadow: 2px 2px 2px rgb(83, 83, 83);
+        }
+        .col .col3 .col31 .c2{
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .col .col3 .col31 .c2 p{
+            opacity: 0.6;
+            font-size: 13px;
+        }
+        .col .col3 .col31 .c2 button{
+            color: blue;
+            border: none;
+        }
+        .col .col3 .col32{
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 2px 2px 5px 5px rgb(135, 134, 134);
+
+        }
+        .col .col3 .col32 .im{
+            width: 60px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+        }
+        .col .col3 .col32 .im img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .col .col3 .col32 .txt{
+            font-weight: 600;
+        }
+        .col .col3 .col32 button{
+            color: blue;
+            border-radius: 20px;
+            border: 1px solid blue;
+            padding: 5px 10px;
+        } 
+        .col .col3 .col33 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .col .col3 .col33 .c31{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .col .col3 .col33 .c31 button{
+            border: none;
+            font-size: 13px;
+            background: transparent;
+        }
+        .col .col3 .col33 .c32{
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .col .col3 .col33 .c32 .im{
+            width: 15px;
+            height: 15px;
+        }
+        .col .col3 .col33 .c32 .im img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="n1">
+            <div class="n11"><img src="lin-log.png" alt=""></div>
+            <input type="search"  placeholder="search" class="n12">
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="n2">
+            <div class="n21"><i class="fa-solid fa-house"></i> Home</div>
+            <div class="n22"><i class="fa-solid fa-user"></i> My network</div>
+            <div class="n23"><i class="fa-solid fa-lock"></i> Job</div>
+            <div class="n24"><i class="fa-solid fa-envelope"></i> Message</div>
+            <div class="n25"><i class="fa-solid fa-bell"></i> notification</div>
+        </div>
+        <div class="n3"><img src="proflie.png" alt="">
+            <div class="dot"></div>
+        </div>
+    </nav>
+    <div class="col">
+        <div class="col1">
+            <div class="col11">
+                <div class="c1">
+                    <img src="images.jpg" alt="" class="img1">
+                    <img src="proflie.png" alt="" class="img2">
+                </div>
+                <div class="c2">
+                    <h3>Reddy Sekhar Reddy</h3>
+                    <p>Full stack trainer at Vector India</p>
+                </div>
+                <div class="c3">
+                    <div class="c31">
+                        <div>Your profile views</div>
+                        <div>Your Post views</div>
+                        <div>Your connections</div>
+                    </div>
+                    <div class="c32">
+                        <div>1123</div>
+                        <div>923</div>
+                        <div>2534</div>
+                    </div>
+                </div>
+                <div class="c4">
+                    <div class="c41"><i class="fa-solid fa-bookmark x"></i> My items</div>
+                    <div><i class="fa-solid fa-money-bill y"></i> Try premium</div>
+                </div>
+            </div>
+            <div class="col12">
+                <div class="c1">
+                    <div><h3>Recent</h3></div>
+                    <div><i class="fa-solid fa-clock-rotate-left z x"></i>  Web Development</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i>  User Interface</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i>  Online learning</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Learn Online</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Code Better</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Group Learning</div>
+                </div>
+                <div class="c2">
+                    <div><h3>GROUPS</h3></div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Web Development</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> HTML & CSS</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> React</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Node</div>
+                </div>
+                <div class="c3">
+                    <div class="c31">
+                        <div>Your profile views</div>
+                        <div>Your Post views</div>
+                        <div>Your connections</div>
+                    </div>
+                    <div class="c32">
+                        <div>1123</div>
+                        <div>923</div>
+                        <div>2534</div>
+                    </div>
+
+                </div>
+                <div class="c4">
+                    <div class="c41"><i class="fa-solid fa-bookmark x"></i> My items </div>
+                    <div class="c42"><i class="fa-solid fa-money-bill y"></i> Try premium</div>
+                </div>
+            </div>
+            <div class="col13">
+                <div class="c1">
+                    <div><h3>Recent</h3></div>
+                    <div><i class="fa-solid fa-clock-rotate-left z x"></i>  Web Development</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i>  User Interface</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i>  Online learning</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Learn Online</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Code Better</div>
+                    <div><i class="fa-solid fa-clock-rotate-left x z"></i> Group Learning</div>
+                </div>
+                <div class="c2">
+                    <div><h3>GROUPS</h3></div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Web Development</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> HTML & CSS</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> React</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Node</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Python</div>
+                    <div><i class="fa-solid fa-user-group x z"></i> Java</div>
+                </div>
+                <div class="c3">
+                    <div><h3>HASHTAG</h3></div>
+                    <div><i class="fa-solid fa-hashtag x z"></i> Web Development</div>
+                    <div><i class="fa-solid fa-hashtag x z"></i> user interface</div>
+                    <div><i class="fa-solid fa-hashtag x z"></i> Online learning</div>
+                </div>
+                <div class="c4">
+                    <div>Discover more</div>
+                </div>
+            </div>
+        </div>
+        <div class="arr">
+            <div class="col2">
+                <div class="c21">
+                    <div class="im"><img src="proflie.png" alt=""></div>
+                    <div class="ta"><textarea name=""  placeholder="Write a post"></textarea></div>
+                </div>
+                <div class="c22">
+                    <div class="img"><button><i class="fa-solid fa-camera x"></i> photo</button></div>
+                    <div class="video"><button><i class="fa-solid fa-video x"></i> video</button></div>
+                    <div class="Event"><button><i class="fa-solid fa-calendar-days x"></i> Event</button></div>
+                    <div class="Post"><button><i class="fa-solid fa-heart x"></i> post</button></div>
+                </div>
+            </div>
+            <div class="arr1"><p></p> sort by:
+                <select name="" class="top">
+                    <option value="">top</option>
+                    <option value="">btm</option>
+                    <option value="">lft</option>
+                    <option value="">rgt</option>
+
+                </select>
+            </div>
+        </div>
+            <div class="col3">
+                <div class="col31">
+                    <div class="c1">
+                        <div class="c11"><h2>Trending News</h2></div>
+                        <div class="c12"><i class="fa-solid fa-circle-info x"></i></div>
+
+                    </div>
+                    <div class="c2">
+                        <div>High demand for skilled manpower <br><p>1d ago &nbsp;10,934 readers</p></div>
+                        <div>High demand for programmers<br><p>4d ago &nbsp;10,934 readers</p></div>
+                        <div>High demand for JS<br><p>6d ago &nbsp;10,934 readers</p></div>
+                        <div>High demand for MERN<br><p>9d ago &nbsp;10,934 readers</p></div>
+                        <div>Python is most demand skill<br><p>15d ago &nbsp;10,934 readers</p></div>
+                        <div><button>Read more</button></div>
+                    </div>
+
+                </div>
+                <div class="col32">
+                    <div class="ad">Ad...</div>
+                    <div>Master the 5 principles of web disign</div>
+                    <div class="im"><img src="proflie.png" alt=""><img src="1.jpg  " alt=""></div>
+                    <div class="txt">Brand and Demand in xiaomi<button>Learn More</button></div>
+                </div>
+                <div class="col33">
+                    <div class="c31">
+                        <div><button>About</button></div>
+                        <div><button>Accessibility</button></div>
+                        <div><button>Help</button></div>
+                        <div><button>Center</button></div>
+                        <div><button>Privacy</button></div>
+                        <div><button>Policy</button></div>
+                        <div><button>Adverstising</button></div>
+                        <div><button>Get</button></div>
+                        <div><button>The App</button></div>
+                        <div><button>More</button></div>
+                    </div>
+                    <div class="c32">
+                        <div class="im"><img src="linkin.png" alt=""></div>
+                        <div>Linkme</div>
+                        <div>&copy; 2022 All right reserve</div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>

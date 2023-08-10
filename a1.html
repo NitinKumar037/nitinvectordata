@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>nested table</title>
+</head>
+<body>
+    <table border="5">
+        <tr>
+            <th rowspan="2">Station</th>
+            <th colspan="2">Temprature</th>
+            <th rowspan="2">Humidity</th>
+            <th rowspan="2">Weather</th>
+        </tr>
+        <tr>
+            <td rowspan="3" colspan="2">
+                <table border="3">
+                    <tr>
+                        <th>Max</th>
+                        <th>Min</th>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>-1</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>USA</td>
+            <td>60%</td>
+            <td>cloudy</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>70%</td>
+            <td>Rainy</td>
+        </tr>
+    </table>
+</body>
+</html>

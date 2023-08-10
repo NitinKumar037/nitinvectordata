@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .con{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url(6.jpg);
+            background-size:cover;
+            background-position: center;
+        }
+        .con .baner{
+            box-sizing: border-box;
+            width: 30%;
+            height: 85vh;
+            position: absolute;
+            background-color: rgb(208, 183, 121);
+            margin: 30px 450px;
+            padding: 10px 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 15px;
+
+        }
+        .con .baner .h{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .con .cp{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .con .cp .pr1{
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+        }
+        .con .cp .pr2{
+            display: flex;
+            justify-content: center;
+            gap: 230px;
+        }
+        .con .baner .both{
+            margin: auto;
+            width: 94%;
+            height: 360px;
+            border: none;
+            border-bottom: 2px solid red;
+            border-top: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .con .baner .foot{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .con .baner .h .h1,.cofee{
+            font-size: 25px;
+            font-weight: 1000;
+            font-family: 'Anton', sans-serif;
+        }
+        .con .baner .h .p{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        .con .baner .im{
+            width: 45px;
+            height: 45px;
+        }
+        .con .baner .im img{
+            width: 100%;
+            height: 100%;
+        }
+        .foot a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <div class="baner">
+        <div class="h">
+            <div class="h1">CAMPER CAFE</div>
+            <div class="p">Est.2020</div>
+        </div>
+    <div class="both">
+        <div class="cp">
+            <div class="cofee"> Coffee</div>
+            <div class="im"><img src="12.jpg" alt=""></div>
+            <div class="pr1">
+                <div class="item">
+                    <div>French Vanilla</div>
+                    <div>Carameil Macchiao</div>
+                    <div>Pumpkin Spice</div>
+                    <div>Hazelnul</div>
+                    <div>Mocha</div>
+                </div>
+                <div class="amt">
+                    <div>3.00</div>
+                    <div>3.75</div>
+                    <div>3.50</div>
+                    <div>4.00</div>
+                    <div>4.50</div>
+                </div>
+            </div>
+        </div>
+        <div class="cp">
+            <div class="cofee"> Dessert</div>
+            <div class="im"><img src="13.jpg" alt=""></div>
+            <div class="pr2">
+                <div class="item">
+                    <div>Donut</div>
+                    <div>Cherry Pie</div>
+                    <div>CheeseCake</div>
+                    <div>Cinnamon Roll</div>
+                </div>
+                <div class="amt">
+                    <div>1.50</div>
+                    <div>2.75</div>
+                    <div>3.00</div>
+                    <div>2.50</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+        <div class="foot">
+            <div><a href="#">Visit our Website</a></div>
+            <div>123 Free Code Camp Drive</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
