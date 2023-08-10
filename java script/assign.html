@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let add =(a,b)=>a+b
+        let obj ={fname:"nitin",lastname:"gupta",fullname:function(){return this.fname+this.lastname},marks:[80,79,93,85],sum:add}
+        console.log(obj.fullname())
+        console.log(obj.sum(7,10))
+        console.log(obj.marks)
+    </script>
+</body>
+</html>

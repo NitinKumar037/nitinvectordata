@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1"/>
+    <button onclick="add()" id="b1">add</button>
+    <button onclick="update()">update</button>
+    <div id="d1"></div>
+    <script>
+        let ind;
+        function add()
+        {
+            let todo=localStorage.getItem("todo")
+            if(todo==null)
+        {
+            todo=[]
+            todo.push(document.getElementById("t1").value)
+        }    
+        document.getElementById("t1").value
+        }
+    </script>
+</body>
+</html>

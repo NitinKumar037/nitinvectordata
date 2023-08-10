@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sqr=(x)=>x*x
+        document.write(sqr(5))
+        console.log(sqr(5))
+    </script><br>
+    <script>//nth fibonacci
+        let fib=(n)=>{
+            let a=-1,b=1,c
+            for (let i=1;i<=n;i++)
+            {
+                c=a+b
+                a=b
+                b=c
+            }
+            return c
+        }
+        document.write(fib(5))
+        console.log(fib(5))
+    </script><br>
+    <script>// using arrow fun
+        let sum=(x,y,c=0)=>x*y+c
+        document.write(sum(10,10,20))
+    </script>
+</body>
+</html>

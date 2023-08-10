@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body:hover{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <button onclick="add()">new text</button>
+    <button onclick="del()">del</button>
+    <script>
+
+        let dr=document.getElementById("d1")
+        function add()
+        {
+            dr.innerHTML=dr.innerHTML+"<input type='text'/>"
+        }
+        function del()
+        {
+            dr.innerHTML=""
+        }
+    </script>
+</body>
+</html>

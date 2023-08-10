@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">hello to all</p>
+    <p id="p2">nitin</p>
+    <script>//getElementById
+       document.getElementById("p1").innerHTML="<h1>Welcome</h1>"
+    </script><br>
+    <p id="p1" onclick="fun(this)">hello to all</p>
+    <p id="p2" onclick="fun(this)">Nitin</p>
+    <script>//with using [this] keywords
+        function fun(e)
+        {
+            e.innerHTML="<h1>Welcome</h1>"
+            console.log(fun.length)
+        }
+    </script>
+</body>
+</html>

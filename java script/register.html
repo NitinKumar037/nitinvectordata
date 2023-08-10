@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text"placeholder="entername"/>
+        <input type="text" placeholder="enter uid" id="t1"/>
+        <input type="password" placeholder="enter password" id="t2"/>
+        <input type="button" onclick="fun()" value="register"/>
+    </form>
+    <script>
+        function fun()
+        {
+            uid=document.getElementById("t1").value
+            pwd=document.getElementById("t2").value
+            localStorage.setItem("uid","uid")
+            localStorage.setItem("pwd","pwd")
+            window.location="./login.html"
+        }
+    </script>
+</body>
+</html>    

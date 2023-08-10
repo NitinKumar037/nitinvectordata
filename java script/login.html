@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="t1" placeholder="enter uid"/>
+        <input type="password" id="t2" placeholder="enter pwd"/>
+        <input type="button" onclick="fun()" value="login"/>
+    </form>
+    <script>
+        uid=localStorage.getItem("uid")
+        pwd=localStorage.getItem("pwd")
+        if(uid!=null && pwd!==null)
+        {
+            document.getElementById("t1").value=uid
+            document.getElementById("t2").value=pwd
+        }
+        function fun()
+        {
+            if (document.getElementById("t1").value==localStorage.getItem("uid")&& document.getElementById("t2").value==localStorage.getItem("pwd"))
+            {
+                window.location="./home.html"
+            }
+            else
+            {
+                window.location="./register.html"
+            }
+        }
+    </script>
+</body>
+</html>

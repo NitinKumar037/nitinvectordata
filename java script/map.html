@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[2,3,4,5,6,7]
+        console.log(a.map((item)=>item*2))
+        console.log(a.map((item,index)=>{
+            {
+                return item*2
+            }
+            return item
+        }))
+        function sqr(n)
+        {
+            return n*n
+        }
+        console.log(a,map(sqr))
+    </script>
+</body>
+</html>

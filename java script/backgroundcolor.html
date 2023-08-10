@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 100%;
+            height: 100vh;
+        }
+        .d2 #d3{
+            background-color: red;
+        }
+        .d2 #d4{
+            background-color:blue;
+        }
+        .d2 #d5{
+            background-color: green;
+        }
+        .d2 #d6{
+            background-color: yellow;
+        }
+        .d2 #d7{
+            background-color: orange;
+        }
+        .d2 #d8{
+            background-color: gray;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div class="d2">
+            <button id="d3" onclick="fun(this)">red</button>
+            <button id="d4" onclick="fun(this)">blue</button>
+            <button id="d5" onclick="fun(this)">green</button>
+            <button id="d6" onclick="fun(this)">yellow</button>
+            <button id="d7" onclick="fun(this)">orange</button>
+            <button id="d8" onclick="fun(this)">gray</button>
+       </div> 
+
+    </div>
+    <script>
+        function fun(n)
+        {
+            document.getElementById("d1").style.background=n.innerHTML
+        }
+    </script>
+</body>
+</html>
